@@ -104,3 +104,44 @@
     color: #00AD5E;
     background-color: #fff;
 }
+/* Responsivo */
+@media(max-width: 450px) {
+    #main-container {
+        height: 100%;
+        /* Cada um tem que ter seu posicionamento, logo um tem que ficar abaixo do outro pq nao tem largura o suficiente */
+        flex-wrap: wrap;
+    }
+    /* COlocando o wrap e o flex 100% faz entender que um tem que ficar abaixo do outro */
+    #form-container,
+    #addres-container {
+        flex: 1 1 100%;
+    }
+    #form-container {
+        /* Order serve para mudar a ordem de exibição na tela do usuário, COlocando desse forma (-1) irá aparecer o form primeiro */
+        order: -1;
+        padding: 20px;
+    }
+    #form-container h2 {
+        margin-bottom: 25px;
+    }
+    #contact-form {
+        width: 100%;
+    }
+    #contact-form input,
+    #contact-form label,
+    #contact-form textarea {
+        border-color: #AAA;
+    }
+    #addres-container {
+        background-position: 0;
+        height: 500px;
+    }
+    .fade {
+        opacity: .9;
+    }
+    #addres-content {
+        top: 25%;
+        left: 25%;
+    }
+
+}
